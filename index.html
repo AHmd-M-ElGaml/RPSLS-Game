@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta
+			name="description"
+			content="Rock, Paper, Scissors, Lizard and Spock game made in vanilla javascript"
+		/>
+		<meta
+			name="keywords"
+			content="Rock, Paper, Scissors, Lizard, Spock, Javascript Game, Game in Vanilla Javascript"
+		/>
+		<meta name="author" content="zDevtutor" />
+
+		<!-- Bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous"
+		/>
+
+		<!-- Main Style -->
+		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<title>RPSLS Entry To The Game</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="text-center mt-5 p-4 p-sm-0">
+			<h1>Rock, Paper, Scissors, Lizard, Spock!</h1>
+		</header>
+
+		<!-- Container -->
+		<section class="container mx-auto">
+			<!-- Game Content -->
+			<section id="game-entry">
+				<!-- RPSLS Img -->
+				<img src="./assets/img/RPSLS.png" alt="RPSLS Game" />
+
+				<!-- Scoreboard Section -->
+				<div class="row justify-content-evenly mt-4">
+					<div class="col-md-2">
+						<!-- Button trigger modal -->
+						<div class="d-grid">
+							<button
+								type="button"
+								class="btn btn-primary"
+								data-bs-toggle="modal"
+								data-bs-target="#scoreboard"
+							>
+								Scoreboard
+							</button>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade" id="scoreboard">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title">Scoreboard</h5>
+										<button
+											type="button"
+											class="btn-close"
+											data-bs-dismiss="modal"
+											aria-label="Close Scoreboard"
+										></button>
+									</div>
+									<div class="modal-body">
+										<table class="table">
+											<thead>
+												<tr>
+													<th>Your Wins</th>
+													<th>Your Loses</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td id="wins">0</td>
+													<td id="losses">0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="modal-footer">
+										<button
+											type="button"
+											class="btn btn-primary"
+											data-bs-dismiss="modal"
+											id="clear-score"
+										>
+											Clear Scores
+										</button>
+										<button
+											type="button"
+											class="btn btn-primary"
+											data-bs-dismiss="modal"
+										>
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- How to play? Section -->
+					<div class="col-md-4 my-4 my-md-0">
+						<!-- Button trigger modal -->
+						<div class="d-grid">
+							<button
+								type="button"
+								class="btn btn-primary"
+								data-bs-toggle="modal"
+								data-bs-target="#how-to-play"
+							>
+								How To Play?
+							</button>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade" id="how-to-play">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title">The Game Rules</h5>
+										<button
+											type="button"
+											class="btn-close"
+											data-bs-dismiss="modal"
+											aria-label="Close Game Rules"
+										></button>
+									</div>
+									<div class="modal-body">
+										<p>
+											The aim of the game is to play
+											<span class="highlight"
+												>Rock, Paper, Scissors, Lizard, and Spock</span
+											>
+											against the computer and to win as many rounds as you
+											want. The game will end after you win or lose against the
+											computer for the specified rounds.
+										</p>
+										<p class="text-center">
+											The rules of the game is very simple. You're able to check
+											it through this link
+											<a
+												href="https://www.wikihow.com/Play-Rock-Paper-Scissors-Lizard-Spock"
+												target="_blank"
+												rel="noreferrer"
+												>https://www.wikihow.com/Play-Rock-Paper-Scissors-Lizard-Spock</a
+											>
+										</p>
+										<h5>How To Play?</h5>
+										<ul>
+											<li>Enter the number of rounds you would like to play</li>
+											<li>
+												Choose the game Level
+												<ul>
+													<li>Level1: Game, Paper, Scissors</li>
+													<li>Level2: Game, Paper, Scissors, Lizard</li>
+													<li>Level3: Game, Paper, Scissors, Lizard, Spock</li>
+												</ul>
+											</li>
+											<li>
+												Press <span class="highlight">Let's Play</span> button
+												to start the game
+											</li>
+											<li>
+												Once the game starts, you will be presented with the
+												available options for this level, select one of the
+												available options
+											</li>
+											<li>
+												The computer will choose its option against yours and
+												the first to achieve the specified rounds will win the
+												game.
+											</li>
+											<li>
+												You have the <span class="highlight">Back</span> button
+												if you would like to quit the game at any given time and
+												get back to the home area.
+											</li>
+											<li>
+												Once you win the game. You will have the option to save
+												your score and it will be available under the scoreboard
+												section
+											</li>
+										</ul>
+									</div>
+									<div class="modal-footer">
+										<button
+											type="button"
+											class="btn btn-primary"
+											data-bs-dismiss="modal"
+										>
+											Close
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Let's Play Form -->
+				<div class="row justify-content-center mt-5 mb-5">
+					<div class="col-md-6">
+						<form
+							action="game.html"
+							method="GET"
+							id="game-form"
+							class="text-start"
+						>
+							<div class="mb-3">
+								<label for="rounds-number" class="form-label"
+									>Enter Number of Rounds</label
+								>
+								<input
+									type="number"
+									name="roundsNumber"
+									class="form-control"
+									id="rounds-number"
+									required
+								/>
+								<small
+									id="validation-message"
+									class="form-text text-warning d-none"
+									>Rounds number should be between 1 and 10</small
+								>
+							</div>
+							<div class="mb-3">
+								<label for="level-select" class="form-label"
+									>Choose Your Level</label
+								>
+								<select
+									name="gameLevel"
+									id="level-select"
+									class="form-select"
+									required
+								>
+									<option value="" disabled selected>Choose Your Level:</option>
+									<option value="level1">Level 1</option>
+									<option value="level2">Level 2</option>
+									<option value="level3">Level 3</option>
+								</select>
+							</div>
+							<div class="d-grid">
+								<button type="submit" class="btn btn-primary mx-auto">
+									Let's Play!
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			// Game Form DOM Elements
+			const gameForm = document.getElementById('game-form');
+			const roundsNumber = document.getElementById('rounds-number');
+			const validationMessage = document.getElementById('validation-message');
+
+			const userWins = document.getElementById('wins');
+			const userLosses = document.getElementById('losses');
+
+			const clearScore = document.getElementById('clear-score');
+
+			// Validate roundsNumber field to accept min and max values of 0 and 10
+			gameForm.addEventListener('submit', e => {
+				if (roundsNumber.value <= 0 || roundsNumber.value > 10) {
+					e.preventDefault();
+					validationMessage.classList.remove('d-none');
+				}
+			});
+
+			// Get Local Storage Items
+			userWins.innerText = localStorage.getItem('userWins');
+			userLosses.innerText = localStorage.getItem('userLost');
+
+			// Clear Local Storage
+			clearScore.addEventListener('click', () => {
+				localStorage.clear();
+				userWins.innerText = 0;
+				userLosses.innerText = 0;
+			});
+		</script>
+	</body>
+</html>
